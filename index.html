@@ -6,7 +6,6 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;1,400&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="./styles.css" />
     <link
       rel="icon"
@@ -14,12 +13,12 @@
       sizes="32x32"
       href="./assets/favicon.svg"
     />
-    <script src="./bukho.js" defer type="module"></script>
+    <script src="./script.js" defer type="module"></script>
     <title>Kanban Task Management</title>
   </head>
 
   <body>
-    <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
+    <!-- Navigation Sidebar -->
     <nav class="side-bar" id="side-bar-div">
       <div id="side-logo-div">
         <img id="logo" src="./assets/logo-light.svg" alt="logo-light" />
@@ -31,7 +30,7 @@
       </div>
     </nav>
 
-    <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
+    <!-- Main Layout -->
     <div id="layout">
       <header id="header" class="sticky-header">
         <div class="header-name-div">
@@ -44,45 +43,44 @@
             Launch Career
           </h2>
         </div>
+        <button id="addTaskBtn">+ Add Task</button>
       </header>
 
       <div class="container">
         <main class="card-column-main">
-          <!-- Task Columns: Display tasks grouped by status (TODO, DOING, DONE). -->
+          <!-- Task Columns -->
           <div class="column-div" data-status="todo">
             <div id="todo-head-div" class="column-head-div">
               <span class="dot" id="todo-dot"></span>
-              <h4 id="toDoText" class="columnHeader">TODO (2)</h4>
+              <h4 id="todoText" class="columnHeader">TODO (0)</h4>
             </div>
-            <!-- Tasks container for TODO -->
-            <div class="tasks-container"></div>
+            <div class="tasks-container" data-status="todo"></div>
           </div>
-          <!-- DOING Column -->
+
           <div class="column-div" data-status="doing">
             <div id="doing-head-div" class="column-head-div">
               <span class="dot" id="doing-dot"></span>
-              <h4 id="doingText" class="columnHeader">DOING (2)</h4>
+              <h4 id="doingText" class="columnHeader">DOING (0)</h4>
             </div>
-            <!-- Tasks container for DOING -->
-            <div class="tasks-container"></div>
+            <div class="tasks-container" data-status="doing"></div>
           </div>
-          <!-- DONE Column -->
+
           <div class="column-div" data-status="done">
             <div id="done-head-div" class="column-head-div">
               <span class="dot" id="done-dot"></span>
-              <h4 id="doneText" class="columnHeader">DONE (2)</h4>
+              <h4 id="doneText" class="columnHeader">DONE (0)</h4>
             </div>
-            <!-- Tasks container for DONE -->
-            <div class="tasks-container"></div>
+            <div class="tasks-container" data-status="done"></div>
           </div>
         </main>
       </div>
     </div>
-    <!-- Modal: Displays each tasks details when the task is clicked -->
+
+    <!-- Task Modal -->
     <dialog id="task-modal">
       <form method="dialog" id="task-form">
         <div class="modal-header">
-          <h3>Task</h3>
+          <h3 id="modal-heading">Task</h3>
           <button type="button" class="close-btn" id="close-modal-btn">
             &times;
           </button>
@@ -100,6 +98,8 @@
           <option value="doing">doing</option>
           <option value="done">done</option>
         </select>
+
+        <button type="button" id="saveTaskBtn">Save</button>
       </form>
     </dialog>
   </body>
