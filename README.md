@@ -20,43 +20,14 @@ Figma Design Reference – Ensuring UI/UX consistency
 
 ## ✨ Features
 
-Implemented
+### Implemented
 
-Persistent Task Storage
-
-Tasks are saved and retrieved from local storage automatically.
-
-Data remains available after refresh or reopening the application.
-
-Task Creation via Modal
-
-Add a new task with a title, description, and status.
-
-Modal resets for each new task.
-
-Tasks are dynamically rendered without needing a refresh.
-
-Task Categorization
-
-Tasks are displayed in To Do, Doing, and Done columns.
-
-Column headers update with task counts.
-
-Responsive Design
-
-Fully responsive layout for desktop and mobile.
-
-Modal and buttons adapt to smaller screens.
-
-Updated & Enhanced
-
-Modularized JavaScript for maintainability.
-
-Added close button for modal interaction.
-
-Improved data validation (task title required).
-
-Clear UI feedback with column task counts.
+- **Persistent Task Storage** — Tasks are saved to `localStorage` using the key `taskboard.tasks.v1`.
+- **Add Task Modal** — Add a task with title (required), description (optional), and status.
+- **Dynamic Rendering** — New tasks render immediately into their column; columns show task counts.
+- **Responsive Layout** — Mobile-first responsive layout; modal adjusts on small screens.
+- **Modular Code** — `storage.js`, `renderer.js`, `modal.js`, `main.js` for separation of concerns.
+- **Validation** — Task title is required.
 
 ## 🚀 Usage
 
@@ -77,11 +48,5 @@ Click Save.
 The task will appear in the correct column instantly.
 
 ## 📌 Interaction Notes
-
-Tasks cannot be left without a title (validation included).
-
-Modal automatically resets on new task creation.
-
-Future extensions can include drag-and-drop, task editing, and deletion.
 
 ✅ This project demonstrates persistent state management with local storage, modular JavaScript design, and responsive UI implementation.
