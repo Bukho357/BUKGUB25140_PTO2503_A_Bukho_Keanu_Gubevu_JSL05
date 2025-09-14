@@ -1,44 +1,87 @@
-# JSL05 Project Brief: Task Board with Local Storage Persistence and Task Creation
+## 🗂️ Task Board with Local Storage Persistence
 
-## Prerequisite
+## 📖 Project Description
 
-1. Before starting this challenge, ensure that you have **correctly populated your DOM elements** as per the solution in JSL04. Additionally, ensure that clicking a task should **open the modal with the relevant task details** as required in the previous challenge.
-2. **Check the project user stories in your student dashboard**, make sure you understand what is required for each feature.
+The Task Board with Local Storage Persistence is a lightweight task management system designed to organize tasks into three categories: To Do, Doing, and Done. Tasks are saved in Local Storage, ensuring that your data remains intact even after refreshing the page or reopening the browser.
 
-## Overview
+The application features a responsive design, an intuitive modal for creating tasks, and dynamic rendering of tasks directly onto the board. It is modular, easy to maintain, and provides a smooth user experience across desktop and mobile devices.
 
-In this project, you will implement a task management system where **tasks are persisted in local storage**, ensuring that tasks remain available even after refreshing the page or reopening the application. Users will be able to **add new tasks**, with the task details being **stored in local storage** and displayed in the appropriate **columns** ("To Do", "Doing", "Done"). The application should also include an **Add Task** modal for creating new tasks.
+## 🛠️ Technologies Used
 
-## Key Objectives
+HTML5 – Structure of the application
 
-### Persistent Task Storage & Retrieval
+CSS3 – Styling and responsive layout
 
-- **Save tasks to local storage**: On page load, the application should **load tasks** from local storage so that the latest task list is available, even after a refresh.
-- Ensure that **tasks are saved in local storage** every time a new task is added so that tasks persist after the page refreshes.
-- **Load tasks** from local storage on startup, so users can see the latest tasks without manually re-entering them.
-- Tasks should be categorized correctly into their respective columns (e.g., "To Do", "Doing", "Done") based on their **status** when loaded from local storage.
+JavaScript (ES6+) – Dynamic rendering, modular logic, and local storage persistence
 
-### Task Creation & Modal Interaction
+Local Storage API – Data persistence between sessions
 
-- Provide an **"Add Task" button** that, when clicked, opens a **modal** for creating a new task.
-- The modal should include:
-  - Fields for entering the **task title** and **description**.
-  - A dropdown to select the task **status** ("To Do", "Doing", "Done").
-  - A **submit button** to add the new task to the task board immediately.
-- After submitting, the task should appear on the board without requiring a page refresh.
+Figma Design Reference – Ensuring UI/UX consistency
 
-## Design & Responsiveness
+## ✨ Features
 
-- The **"Add New Task" modal** should match the [Figma design](https://www.figma.com/design/y7bFCUYL5ZHfPeojACBXg2/Challenges-%7C-JSL?node-id=0-1&p=f&t=NNqgDPlU1PNLLh8i-0), including mobile-responsive behavior.
-- Ensure that the modal and task board are **fully responsive** and function properly on both desktop and mobile devices.
-- The "Add Task" button should **transform** appropriately on mobile devices to match the Figma design.
+Implemented
 
-## Code Structure & Maintainability
+Persistent Task Storage
 
-- **Modularize your JavaScript code**: Break your code into separate modules, each handling a **single responsibility** (e.g., local storage handling, task rendering, modal management).
-- Use **descriptive variable and function names** to ensure the code is clear and easy to maintain.
-- Include **JSDoc comments** for every major function and module to describe their functionality, parameters, and return values.
+Tasks are saved and retrieved from local storage automatically.
 
-## Expected Outcome
+Data remains available after refresh or reopening the application.
 
-A fully functional task management system where tasks are dynamically loaded from **local storage**, tasks can be **added through a modal**, and the application **remains consistent** after refreshing the page. The code will be modular, well-documented, and easy to maintain, following best practices for JavaScript development.
+Task Creation via Modal
+
+Add a new task with a title, description, and status.
+
+Modal resets for each new task.
+
+Tasks are dynamically rendered without needing a refresh.
+
+Task Categorization
+
+Tasks are displayed in To Do, Doing, and Done columns.
+
+Column headers update with task counts.
+
+Responsive Design
+
+Fully responsive layout for desktop and mobile.
+
+Modal and buttons adapt to smaller screens.
+
+Updated & Enhanced
+
+Modularized JavaScript for maintainability.
+
+Added close button for modal interaction.
+
+Improved data validation (task title required).
+
+Clear UI feedback with column task counts.
+
+## 🚀 Usage
+
+Adding a New Task
+
+Click the “+ Add Task” button in the header.
+
+Fill in the task details:
+
+Title (required)
+
+Description (optional)
+
+Status (To Do, Doing, or Done)
+
+Click Save.
+
+The task will appear in the correct column instantly.
+
+## 📌 Interaction Notes
+
+Tasks cannot be left without a title (validation included).
+
+Modal automatically resets on new task creation.
+
+Future extensions can include drag-and-drop, task editing, and deletion.
+
+✅ This project demonstrates persistent state management with local storage, modular JavaScript design, and responsive UI implementation.
